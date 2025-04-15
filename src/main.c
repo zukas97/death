@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <raylib.h>
+#include "gameloop.h"
 
 #define WIDTH 1280
 #define HEIGHT 720
@@ -13,5 +14,6 @@ int main (int argc char** argv) {
         update();
 
     }
+    CloseWindow();
     
 }
