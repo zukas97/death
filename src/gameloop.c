@@ -7,7 +7,7 @@ void render() {
 }
 
 void input() {
-        if (IsKeyDown(KEY_ESC)) {
+        if (IsKeyDown(KEY_END)) {
                 CloseWindow();
         }
 }
