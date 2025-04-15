@@ -6,14 +6,20 @@
 #define HEIGHT 720
 
 int main(int argc, char** argv) {
-    InitWindow(WIDTH, HEIGHT, "Death Fight");
+	InitWindow(WIDTH, HEIGHT, "Death Fight");
 
-    while (!WindowShouldClose()) {
-        render();
-        input();
-        update();
+	Image test = LoadImage("assets/Eatguy.png");
+	//ImageDraw(&test, test, (Rectangle){0, 0, 50.0f, 50.0f}, (Rectangle){0, 0, 50.0f, 50.0f}, WHITE);
+	Texture2D texture = LoadTextureFromImage(test);
+	UnloadImage(test);
 
-    }
-    CloseWindow();
-    
+	while (!WindowShouldClose()) {
+		render(texture);
+		input();
+		update();
+
+	}
+	UnloadTexture(texture);
+	CloseWindow();
+
 }
