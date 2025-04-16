@@ -4,5 +4,5 @@
 #include "charactor.h"
 
 void render(Texture2D texture);
-void input();
-void update();
+void input(bool* running);
+void update(bool* running);
