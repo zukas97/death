@@ -9,3 +9,6 @@ typedef struct {
 } Character;
 
 
+Character create_character(Image image, int x, int y, int w, int h, char* name);
+
+void render_character(Character character);

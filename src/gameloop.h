@@ -1,8 +1,8 @@
 #include <raylib.h>
 #include <stdio.h>
 //#include <raylib.h>
-#include "charactor.h"
+#include "character.h"
 
-void render(Texture2D texture);
+void render(Character eatguy);
 void input(bool* running);
 void update(bool* running);

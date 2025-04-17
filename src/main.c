@@ -13,18 +13,19 @@ int main(int argc, char** argv) {
 
 	Image test = LoadImage("assets/Eatguy.png");
 	//ImageDraw(&test, test, (Rectangle){0, 0, 50.0f, 50.0f}, (Rectangle){0, 0, 50.0f, 50.0f}, WHITE);
-	Texture2D texture = LoadTextureFromImage(test);
-	SetTextureFilter(texture, TEXTURE_FILTER_TRILINEAR);
+	//Texture2D texture = LoadTextureFromImage(test);
+	//SetTextureFilter(texture, TEXTURE_FILTER_TRILINEAR);
+	Character eatguy = create_character(test, 640, 360, test.width / 10, test.height / 10, "eatguy");
 
 	UnloadImage(test);
 
 	while (running) {
-		render(texture);
+		render(eatguy);
 		input(&running);
 		update(&running);
 
 	}
-	UnloadTexture(texture);
+	UnloadTexture(eatguy.texture);
 	CloseWindow();
 
 }

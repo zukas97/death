@@ -1,13 +1,15 @@
 #include "gameloop.h"
 #include <raylib.h>
 
-void render(Texture2D texture) {
+void render(Character eatguy) {
         BeginDrawing();  
         ClearBackground(RAYWHITE);
 	//DrawText("test", 640, 360, 15, BLACK);
 	//DrawTexture(texture, 0, 0, WHITE);
-	//SetTextureFilter(texture, TEXTURE_FILTER_BILINEAR);
-	DrawTextureEx(texture, (Vector2){640, 360}, 0, 0.15, WHITE);
+	GenTextureMipmaps(&eatguy.texture);
+	SetTextureFilter(eatguy.texture, TEXTURE_FILTER_TRILINEAR);
+	//DrawTextureEx(texture, (Vector2){640, 360}, 0, 0.15, WHITE);
+	render_character(eatguy);
 	//UnloadTexture(texture);
 	//
         EndDrawing();
