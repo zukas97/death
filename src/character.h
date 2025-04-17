@@ -21,6 +21,7 @@ typedef struct {
     int sanity;
     int hunger;
     int thirst;
+    int age;
     SocialStatus class;
     Gender gender;
 } Stats;
@@ -36,6 +37,7 @@ typedef struct {
 
 int check_stat(char* stat);
 
-Character create_character(Image image, int x, int y, int w, int h, char* name);
+Character create_character(Image image, int x, int y, char* name);
 
-void render_character(Character character);
+void render_character(Character character, double scale);
+void render_characterEx(Character character, int h, int w);
