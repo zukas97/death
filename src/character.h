@@ -1,10 +1,28 @@
 #include <raylib.h>
 
+enum SocialStatus {
+    SLAVE,
+    PEASANT,
+    BOURSUASIE,
+    NOBLE,
+    ROYALTY
+}
+
+enum Gender {
+    MALE,
+    FEMALE
+}
+
 typedef struct {
     int health;
     int resistance;
     int attack;
     int faith;
+    int sanity;
+    int hunger;
+    int thirst;
+    SocialStatus class;
+    Gender gender;
 } Stats;
 
 typedef struct {
