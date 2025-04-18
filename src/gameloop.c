@@ -9,7 +9,7 @@ void render(Character eatguy) {
 	GenTextureMipmaps(&eatguy.texture);
 	SetTextureFilter(eatguy.texture, TEXTURE_FILTER_TRILINEAR);
 	//DrawTextureEx(texture, (Vector2){640, 360}, 0, 0.15, WHITE);
-	render_character(eatguy);
+	render_character(eatguy, 0.25);
 	//UnloadTexture(texture);
 	//
         EndDrawing();

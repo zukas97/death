@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
 	//ImageDraw(&test, test, (Rectangle){0, 0, 50.0f, 50.0f}, (Rectangle){0, 0, 50.0f, 50.0f}, WHITE);
 	//Texture2D texture = LoadTextureFromImage(test);
 	//SetTextureFilter(texture, TEXTURE_FILTER_TRILINEAR);
-	Character eatguy = create_character(test, 640, 360, test.width / 10, test.height / 10, "eatguy");
+	Character eatguy = create_character(test, WIDTH/2, HEIGHT/2, "eatguy");
 
 	UnloadImage(test);
 

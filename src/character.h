@@ -6,12 +6,17 @@ enum SocialStatus {
     BOURSUASIE,
     NOBLE,
     ROYALTY
-}
+};
 
 enum Gender {
     MALE,
     FEMALE
-}
+};
+
+enum CardType {
+	CHACACTER,
+	POWER
+};
 
 typedef struct {
     int health;
@@ -22,8 +27,8 @@ typedef struct {
     int hunger;
     int thirst;
     int age;
-    SocialStatus class;
-    Gender gender;
+    enum SocialStatus Class;
+    enum Gender gender;
 } Stats;
 
 typedef struct {
@@ -34,6 +39,13 @@ typedef struct {
     int w, h;
     Stats stats;
 } Character;
+
+typedef struct {
+	Character character;
+	Rectangle rect;
+	Color color;
+	enum CardType type;
+} Card;
 
 int check_stat(char* stat);
 
